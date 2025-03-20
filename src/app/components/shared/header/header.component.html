@@ -1,0 +1,11 @@
+<!-- <ng-container *ngLet="isScrolled$$ | async as isScrolled"> -->
+  <header [class]="(isScrolled$$ | async) ? 'header-container scrolled' : 'header-container'" #headerContainer>
+    <button [class]="{'scrolled': (isScrolled$$ | async)}"><img src="icons/translate.svg" alt="translate" /></button>
+    <nav>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#about">About</a>
+      <a href="#contacts">Contacts</a>
+    </nav>
+  </header>
+  <h1 [class]="(isScrolled$$ | async) ? 'header-title scrolled' : 'header-title'">Иван&nbsp;Капустин</h1>
+<!-- </ng-container> -->

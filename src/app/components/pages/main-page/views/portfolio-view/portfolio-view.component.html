@@ -1,0 +1,38 @@
+<div class="portfolio-container" id="portfolio">
+  <div class="filters-container">
+    <div class="filters-container__main-buttons">
+      <button class="filter-item" (click)="handleFilterChange('all')">
+        <h3>Все работы</h3>
+      </button>
+      <h3>/</h3>
+      <button class="filter-item" (click)="handleFilterChange('commertials')">
+        <h3>Коммерция</h3>
+      </button>
+      <h3>/</h3>
+      <button class="filter-item" (click)="handleFilterChange('cinema')">
+        <h3>Кино</h3>
+      </button>
+    </div>
+    <div class="filters-container__secondary-buttons">
+      <button class="filter-item" (click)="handleFilterChange('archieve')">
+        <h3>Архив</h3>
+      </button>
+    </div>
+  </div>
+  <div class="portfolio-container__content">
+    <ng-container *ngFor="let item of portfolioList">
+      <ng-container *ngIf="checkIsAllowed(item.category)">
+        <div
+          class="portfolio-container__content__item"
+          (click)="handlePortfolioItemClick(item)"
+        >
+          <img src="{{ item.coverUrl }}" alt="" />
+          <div class="portfolio-container__content__item__hover">
+            <h4>{{ item.name | uppercase }}</h4>
+            <span>{{ item.category }}</span>
+          </div>
+        </div>
+      </ng-container>
+    </ng-container>
+  </div>
+</div>

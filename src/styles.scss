@@ -1,1 +1,39 @@
-/* You can add global styles to this file, and also import other style files */
+@use "bootstrap/dist/css/bootstrap.min.css";
+@use "styles/reset.scss";
+
+* {
+  font-family: "IBMPlexMono", monospace;
+  // font-size: 18px;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Cormorant Garamond";
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 100px;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 38px;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 30px;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-size: 30px;
+}
