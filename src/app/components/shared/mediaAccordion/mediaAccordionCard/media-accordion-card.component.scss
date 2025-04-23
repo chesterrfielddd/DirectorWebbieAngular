@@ -1,0 +1,57 @@
+.card {
+  display: flex;
+  flex-direction: row;
+  border: none;
+  border-radius: 0;
+  transition: 0.2s;
+  height: 100%;
+  
+  .label {
+    background-color: #0b0b0b;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+    padding: 10px 0;
+    width: 50px;
+    cursor: pointer;
+
+    .index {
+      font-size: 38px;
+      font-family: "IBM Plex Mono", sans-serif;
+      transform: rotate(-90deg);
+    }
+
+    .label-title {
+      font-family: "Cormorant Garamond ", serif;
+      transform: rotate(-90deg);
+    }
+
+    .year {
+      font-size: 14px;
+      opacity: 0.5;
+      transform: rotate(-90deg);
+    }
+  }
+
+  .image-container {
+    aspect-ratio: 16/9;
+    width: 0;
+    transition: 0.2s ease-out;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  // .image-container.image-container__open {
+  //   width: auto;
+  // }
+  // &.active {
+
+  // }
+}

@@ -1,10 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { PortfolioFilterType } from '../../../../../models/portfolio-filter.type';
 import { PORTFOLIO_LIST } from './portfolio-view.config';
 import { PopupService } from '../../../../../services/popup.service';
-import { IPortfolioItem } from '../../../../../models/portfolio-item.interface';
+import { PortfolioFilterType } from '../../../../../models';
+import { IPortfolioItem } from '../../../../../models';
 
 @Component({
   selector: 'app-portfolio-view',

@@ -1,0 +1,9 @@
+.accordion {
+  position: relative;
+  height: 370px;
+  display: flex;
+
+  @media (max-width: 1024px) {
+    justify-content: end;
+  }
+}
