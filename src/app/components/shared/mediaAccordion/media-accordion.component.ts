@@ -1,30 +1,47 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, OnInit, Renderer2 } from '@angular/core';
-import { IAboutPicture } from '../../../models';
-import { BehaviorSubject } from 'rxjs';
+import {
+  AfterContentInit,
+  Component,
+  ContentChildren,
+  QueryList,
+} from '@angular/core';
 import { MediaAccordionCardComponent } from './mediaAccordionCard/media-accordion-card.component';
 
 @Component({
   selector: 'app-media-accordion',
-  imports: [CommonModule, MediaAccordionCardComponent],
+  imports: [CommonModule],
   templateUrl: './media-accordion.component.html',
   styleUrl: './media-accordion.component.scss',
 })
-export class MediaAccordionComponent implements OnInit {
-  @Input() data: IAboutPicture[];
+export class MediaAccordionComponent implements AfterContentInit {
+  @ContentChildren(MediaAccordionCardComponent)
+  items!: QueryList<MediaAccordionCardComponent>;
 
-  openedCardIndex: number | null = 0;
+  private currentOpenIndex: number | null = null;
 
-  constructor() {}
+  ngAfterContentInit() {
+    this.items.forEach((item, index) => {
+      item.toggle.subscribe(() => this.toggleCard(index));
+    });
 
-  ngOnInit(): void {
-    this.initSubscription();
+    setTimeout(() => {
+      if (this.items.length > 0) {
+        this.toggleCard(0);
+      }
+    });
   }
+  
+  toggleCard(index: number) {
+    if (this.currentOpenIndex === index) {
+      this.items.get(index)!.isOpen = false;
+      this.currentOpenIndex = null;
+    } else {
+      if (this.currentOpenIndex !== null) {
+        this.items.get(this.currentOpenIndex)!.isOpen = false;
+      }
 
-  private initSubscription(): void {}
-
-  onToggle(index: number) {
-    this.openedCardIndex = this.openedCardIndex === index ? null : index;
-    console.log('toggled', this.openedCardIndex)
+      this.items.get(index)!.isOpen = true;
+      this.currentOpenIndex = index;
+    }
   }
 }

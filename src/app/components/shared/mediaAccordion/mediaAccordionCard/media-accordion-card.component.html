@@ -1,10 +1,10 @@
-<div class="card" (click)="this.handleCardClick()">
+<div class="card" [class.open]="isOpen" (click)="handleCardClick()">
   <div class="label">
     <span class="year">{{ data.year }}</span>
     <span class="label-title">{{ data.title | uppercase }}</span>
     <h4 class="index">0{{ index + 1 }}</h4>
   </div>
-  <div class="image-container" #cardImage>
+  <div class="image-container" [@slideAnimation]="isOpen ? 'open' : 'closed'" #cardImage>
     <img [src]="data.src" [alt]="data.title" />
   </div>
 </div>

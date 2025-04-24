@@ -1,9 +1,3 @@
 <div class="accordion" #accordion>
-  <ng-container *ngFor="let item of data; let i = index;">
-    <app-media-accordion-card 
-    [data]="item" 
-    [index]="i"
-    [isOpen]="openedCardIndex === i"
-    (toggle)="this.onToggle(i)"></app-media-accordion-card>
-  </ng-container>
+  <ng-content></ng-content>
 </div>
