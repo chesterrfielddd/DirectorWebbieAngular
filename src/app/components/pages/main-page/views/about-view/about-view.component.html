@@ -1,5 +1,5 @@
+<div id="about" class="info-container">
 <div class="wrapper">
-  <div id="about" class="info-container">
     <div class="text-block">
       <h4>ABOUT</h4>
       <div class="text-container">
@@ -17,13 +17,6 @@
         </p>
       </div>
     </div>
-    <app-media-accordion>
-      <ng-container *ngFor="let item of mediaData; let i = index">
-        <app-media-accordion-card
-          [data]="item"
-          [index]="i"
-        ></app-media-accordion-card>
-      </ng-container>
-    </app-media-accordion>
+    <app-faq [data]="mediaData"></app-faq>
   </div>
 </div>

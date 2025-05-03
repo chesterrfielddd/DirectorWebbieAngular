@@ -5,6 +5,7 @@
     <h4 class="index">0{{ index + 1 }}</h4>
   </div>
   <div class="image-container" [@slideAnimation]="isOpen ? 'open' : 'closed'" #cardImage>
-    <img [src]="data.src" [alt]="data.title" />
+    <img class="img" [src]="data.src" [alt]="data.title" />
+     <!-- <div class="img"></div> -->
   </div>
 </div>

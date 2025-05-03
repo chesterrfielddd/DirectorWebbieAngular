@@ -5,11 +5,31 @@ export const ABOUT_PICTURES: IAboutPicture[] = [
   {
     title: 'title',
     year: '2010',
-    src: 'https://i.pinimg.com/736x/5d/0e/dd/5d0eddefdf9a36d4dbf92bb010fb61ae.jpg'
+    src: 'media/images/about-pic-1.jpg'
   },
   {
     title: 'title',
     year: '2010',
-    src: 'https://i.pinimg.com/736x/5d/0e/dd/5d0eddefdf9a36d4dbf92bb010fb61ae.jpg'
+    src: 'media/images/about-pic-2.jpg'
+  },
+  {
+    title: 'title',
+    year: '2010',
+    src: 'media/images/about-pic-3.jpg'
+  },
+  {
+    title: 'title',
+    year: '2010',
+    src: 'media/images/about-pic-4.jpg'
+  },
+  {
+    title: 'title',
+    year: '2010',
+    src: 'media/images/about-pic-5.jpg'
+  },
+  {
+    title: 'title',
+    year: '2010',
+    src: 'media/images/about-pic-6.jpg'
   }
 ]

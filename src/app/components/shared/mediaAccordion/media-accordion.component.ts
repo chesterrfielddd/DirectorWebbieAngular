@@ -30,7 +30,6 @@ export class MediaAccordionComponent implements AfterContentInit {
       }
     });
   }
-  
   toggleCard(index: number) {
     if (this.currentOpenIndex === index) {
       this.items.get(index)!.isOpen = false;

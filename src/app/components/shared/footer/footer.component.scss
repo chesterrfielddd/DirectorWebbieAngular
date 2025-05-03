@@ -4,8 +4,28 @@ footer {
   padding-top: 40px;
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr 2fr 1fr;
   padding-bottom: 50px;
+  position: relative;
+
+  @media (max-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    row-gap: 30px;
+    column-gap: 0;
+    padding-bottom: 0;
+
+    .col.col-title {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 600px) {
+    padding: 0 10px;
+    padding-top: 40px;
+  }
 
   h4 {
     color: #000;
@@ -56,6 +76,7 @@ footer {
         width: 100%;
         background-color: #000;
         border-radius: 5px;
+        cursor: pointer;
 
         &.secondary {
           background-color: transparent;
@@ -69,25 +90,73 @@ footer {
       display: grid;
       grid-template-columns: 1fr 3fr;
 
+      @media (max-width: 1024px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        aspect-ratio: 2/1;
+        bottom: 0;
+        left: 0;
+        align-self: center;
+      }
+
       .nav {
         display: flex;
         flex-direction: column;
         gap: 20px;
         align-items: end;
+
+        @media (max-width: 1024px) {
+          display: none;
+        }
       }
 
       .portrait {
         border: 1px solid #000;
         border-radius: 5px;
         aspect-ratio: 1/1;
-        
+
+        @media (max-width: 1024px) {
+          width: 100vw;
+          height: 100%;
+          display: flex;
+          align-items: start;
+          justify-content: start;
+          border-radius: 0;
+          aspect-ratio: auto;
+        }
+
         img {
           border-radius: 5px;
           width: 100%;
           height: 100%;
           object-fit: cover;
+          object-position: top;
+
+          @media (max-width: 1024px) {
+            border-radius: 0;
+            height: auto;
+            aspect-ratio: 2/1;
+          }
         }
       }
+    }
+  }
+
+  .col.col-desc-cont {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+
+    @media (max-width: 600px) {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .col {
+      width: 100%;
     }
   }
 }

@@ -1,0 +1,14 @@
+<div class="faq-container">
+  <ng-container *ngFor="let item of data; let i = index">
+    <div class="card" (click)="handleCardClick(i)">
+      <div class="label">
+        <span class="year">{{ item.year }}</span>
+        <span class="label-title">{{ item.title | uppercase }}</span>
+        <h4 class="index">0{{ i + 1 }}</h4>
+      </div>
+      <div class="image-container" [@slideAnimation]="openIndex === i ? 'open' : 'closed'">
+        <img class="img" [src]="item.src" [alt]="item.title" />
+      </div>
+    </div>
+  </ng-container>
+</div>

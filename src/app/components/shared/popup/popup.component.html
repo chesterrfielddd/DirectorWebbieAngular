@@ -15,7 +15,7 @@
         <h4>{{ data.name | uppercase }}</h4>
         <span>{{ data.category }}</span>
       </div>
-      <p>{{ data.description }}</p>
+      <p [innerHTML]="data.description"></p>
     </div>
   </div>
 </div>
