@@ -1,7 +1,8 @@
 export interface IPortfolioItem {
   name: string,
-  category: "commertials" | "cinema" | "archieve",
+  category: "commertials" | "cinema" | "NDA",
   description?: string,
   coverUrl: string,
-  videoUrl: string,
+  videoUrl?: string,
+  photoes?: string[],
 }

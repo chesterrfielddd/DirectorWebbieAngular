@@ -25,7 +25,9 @@ export class PopupComponent implements OnDestroy {
   ) {
     this.dataSubscription = this._popupService.popupData$.subscribe((data) => {
       this.data = data;
-      this.videoLink = this._sanitizer.bypassSecurityTrustResourceUrl(data.videoUrl);
+      this.videoLink = this._sanitizer.bypassSecurityTrustResourceUrl(
+        data.videoUrl
+      );
     });
 
     this.visibilitySubscription = this._popupService.isVisible$.subscribe(
