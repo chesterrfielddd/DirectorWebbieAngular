@@ -1,0 +1,20 @@
+<div class="slider" #slider>
+  <div class="slider__rail" #rail>
+    <ng-content></ng-content>
+  </div>
+  <div
+    class="slider__arrow slider__arrow_left"
+    #leftArrow
+    (click)="handleLeftArrowClick()"
+  ></div>
+  <div
+    class="slider__arrow slider__arrow_right"
+    #rightArrow
+    (click)="handleRightArrowClick()"
+  ></div>
+  <div class="slider__pagination">
+    <ng-container *ngFor="let dot of slides">
+      <div class="slider__pagination-dot" #paginationDot></div>
+    </ng-container>
+  </div>
+</div>

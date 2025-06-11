@@ -1,6 +1,6 @@
-<div *ngIf="isVisible" (click)="close()" class="modal-background">
+<div *ngIf="isVisible" (click)="close($event)" class="modal-background">
   <div class="modal-container">
-    <div class="video-container">
+    <div class="media-container">
       <ng-container *ngIf="data.videoUrl">
         <iframe
           title="vimeo-player"
@@ -9,16 +9,15 @@
           allowfullscreen
         ></iframe>
       </ng-container>
-      <!-- <ng-container *ngIf="data.photoes">
-        <div class="swiper">
-          <div class="swiper-wrapper">
-            <ng-container *ngFor="let photo of data.photoes">
-              <div class="swiper-slide"><div class="swiper-slide__image"><img [src]="photo" alt="" /></div></div>
-            </ng-container>
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-      </ng-container> -->
+      <ng-container *ngIf="data.photoes">
+        <app-slider>
+          <ng-container *ngFor="let imageSrc of data.photoes; index as i">
+            <app-slider-slide>
+              <img [src]="imageSrc" alt="" />
+            </app-slider-slide>
+          </ng-container>
+        </app-slider>
+      </ng-container>
     </div>
     <div class="text-container">
       <div class="header">
