@@ -14,9 +14,11 @@ export class PopupService {
   openPopup(data: IPortfolioItem) {
     this.popupDataSubject.next(data);
     this.isVisibleSubject.next(true);
+    document.body.style.overflow = 'hidden';
   }
-
+  
   closePopup() {
     this.isVisibleSubject.next(false);
+    document.body.style.overflow = 'visible';
   }
 }

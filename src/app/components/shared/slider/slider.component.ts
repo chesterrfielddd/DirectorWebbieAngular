@@ -26,10 +26,7 @@ export class SliderComponent implements AfterViewInit, OnInit {
   @ViewChild('leftArrow') leftArrow!: ElementRef<HTMLElement>;
   @ViewChild('rightArrow') rightArrow!: ElementRef<HTMLElement>;
   @ViewChild('rail') rail!: ElementRef<HTMLElement>;
-  @ViewChildren('paginationDot') paginationDots!: ElementRef<HTMLElement>[];
-  // @Input() sliderParams!: SliderConfig;
-
-  // gap = this.sliderParams.gap || SLIDER_DEFAULT_CONFIG.gap;
+  @ViewChildren('paginationDot') paginationDots!: QueryList<ElementRef>;
 
   sliderWidth: number;
   sliderHeight: number;
@@ -57,11 +54,9 @@ export class SliderComponent implements AfterViewInit, OnInit {
     });
   }
 
-  private updateActiveSlide(index: number): void {
+  private updateActiveSlide(activatedIndex: number): void {
     if (this.rail) {
-      this.rail.nativeElement.style.left = `-${index * this.sliderWidth}px`;
-      // this.paginationDots[index].nativeElement.style.width = '7px';
-      // this.paginationDots[index].nativeElement.style.height = '7px';
+      this.rail.nativeElement.style.left = `-${activatedIndex * this.sliderWidth}px`;
     }
   }
 
@@ -75,5 +70,9 @@ export class SliderComponent implements AfterViewInit, OnInit {
     if (this.activeSlide$$.value > 0) {
       this.activeSlide$$.next(this.activeSlide$$.value - 1);
     }
+  }
+
+  handlePaginationClick(index: number): void {
+    this.activeSlide$$.next(index);
   }
 }
