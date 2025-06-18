@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import {
   AfterContentInit,
   Component,
@@ -9,7 +9,7 @@ import { MediaAccordionCardComponent } from './mediaAccordionCard/media-accordio
 
 @Component({
   selector: 'app-media-accordion',
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './media-accordion.component.html',
   styleUrl: './media-accordion.component.scss',
 })

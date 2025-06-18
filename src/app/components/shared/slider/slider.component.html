@@ -13,7 +13,7 @@
     (click)="handleRightArrowClick()"
   ></div>
   <div class="slider__pagination">
-    <ng-container *ngFor="let dot of slides; let i = index">
+    @for (dot of slides; track dot; let i = $index) {
       <div
         class="slider__pagination-dot"
         [style.width.px]="(activeSlide$$ | async) === i ? 7 : 5"
@@ -21,6 +21,6 @@
         #paginationDot
         (click)="handlePaginationClick(i)"
       ></div>
-    </ng-container>
+    }
   </div>
 </div>

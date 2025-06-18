@@ -21,20 +21,20 @@
       </div>
     </div>
     <div class="portfolio-container__content">
-      <ng-container *ngFor="let item of portfolioList">
-        <ng-container *ngIf="checkIsAllowed(item.category)">
+      @for (item of portfolioList; track item) {
+        @if (checkIsAllowed(item.category)) {
           <div
             class="portfolio-container__content__item"
             (click)="handlePortfolioItemClick(item)"
-          >
+            >
             <img src="{{ item.coverUrl }}" alt="" />
             <div class="portfolio-container__content__item__hover">
               <h4>{{ item.name | uppercase }}</h4>
               <span>{{ item.category }}</span>
             </div>
           </div>
-        </ng-container>
-      </ng-container>
+        }
+      }
     </div>
   </div>
 </div>

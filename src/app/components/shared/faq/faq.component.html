@@ -1,5 +1,5 @@
 <div class="faq-container">
-  <ng-container *ngFor="let item of data; let i = index">
+  @for (item of data; track item; let i = $index) {
     <div class="card" (click)="handleCardClick(i)">
       <div class="label">
         <span class="year">{{ item.year }}</span>
@@ -10,5 +10,5 @@
         <img class="img" [src]="item.src" [alt]="item.title" />
       </div>
     </div>
-  </ng-container>
+  }
 </div>

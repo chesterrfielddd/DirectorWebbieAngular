@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component } from '@angular/core';
 import * as content from './about-view.config';
 import { FaqComponent } from "../../../../shared/faq/faq.component";
@@ -6,7 +6,6 @@ import { FaqComponent } from "../../../../shared/faq/faq.component";
 @Component({
   selector: 'app-about-view',
   imports: [
-    CommonModule,
     FaqComponent
 ],
   templateUrl: './about-view.component.html',
