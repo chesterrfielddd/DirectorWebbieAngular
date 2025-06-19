@@ -15,20 +15,29 @@
     </div>
     <div class="col col-contacts">
       <div class="contacts-box">
+        @for (item of content.contacts; track item) {
         <div class="contacts-row">
-          <span>Mail</span>
+          <span [innerHTML]="item.name"></span>
           <div class="line"></div>
-          <a href="#" class="contact">mail-zaglushka.ru</a>
+          <a
+            [href]="item.link"
+            target="_blank"
+            class="contact"
+            [innerHTML]="item.contact"
+          ></a>
         </div>
-        <div class="contacts-row">
-          <span>Telegram</span>
-          <div class="line"></div>
-          <a href="#" class="contact">-tg_zaglushka</a>
-        </div>
+        }
       </div>
       <div class="buttons-box">
-        <button class="secondary">В продакшн</button>
-        <button>В телеграм</button>
+        @for (item of content.buttons; track item) {
+        <a
+          [class]="item.isPrimary ? 'button' : 'button secondary'"
+          [href]="item.link"
+          [innerHTML]="item.text"
+          target="_blank"
+          ></a
+        >
+        }
       </div>
     </div>
   </div>
@@ -39,7 +48,7 @@
       <a href="#about">About</a>
     </div>
     <div class="portrait">
-      <img src="media/images/vanyusha_chb.png" alt="">
+      <img src="media/images/vanyusha_chb.png" alt="" />
     </div>
   </div>
 </footer>

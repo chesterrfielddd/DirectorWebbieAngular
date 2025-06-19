@@ -6,7 +6,7 @@ html {
 }
 
 * {
-  font-family: "IBMPlexMono", monospace;
+  font-family: "IBM Plex Mono", monospace;
   color: #fff;
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
@@ -18,11 +18,11 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Cormorant Garamond";
+  font-family: "Cormorant Garamond", serif;
 }
 
 h1 {
-  font-weight: 400;
+  font-weight: 600;
   font-size: 65px;
   text-wrap: nowrap;
 
@@ -46,7 +46,7 @@ h2 {
 }
 
 h3 {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 30px;
   font-style: italic;
   text-transform: uppercase;
@@ -63,6 +63,7 @@ h3 {
 
 h4 {
   font-size: 30px;
+  font-weight: 500;
 }
 
 .wrapper {

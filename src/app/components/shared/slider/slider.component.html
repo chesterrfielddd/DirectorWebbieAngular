@@ -6,21 +6,28 @@
     class="slider__arrow slider__arrow_left"
     #leftArrow
     (click)="handleLeftArrowClick()"
-  ></div>
+  >
+    <img src="icons/arrow-right.png" alt="arrow-left" />
+  </div>
   <div
     class="slider__arrow slider__arrow_right"
     #rightArrow
     (click)="handleRightArrowClick()"
-  ></div>
+  >
+    <img src="icons/arrow-right.png" alt="arrow-right" />
+  </div>
   <div class="slider__pagination">
     @for (dot of slides; track dot; let i = $index) {
-      <div
-        class="slider__pagination-dot"
-        [style.width.px]="(activeSlide$$ | async) === i ? 7 : 5"
-        [style.height.px]="(activeSlide$$ | async) === i ? 7 : 5"
-        #paginationDot
-        (click)="handlePaginationClick(i)"
-      ></div>
+    <div
+      class="slider__pagination-dot"
+      [style.width.px]="(activeSlide$$ | async) === i ? 7 : 5"
+      [style.height.px]="(activeSlide$$ | async) === i ? 7 : 5"
+      [style.background-color]="
+        (activeSlide$$ | async) === i ? '#fff' : '#0b0b0b'
+      "
+      #paginationDot
+      (click)="handlePaginationClick(i)"
+    ></div>
     }
   </div>
 </div>

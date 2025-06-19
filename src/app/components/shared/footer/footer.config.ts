@@ -9,14 +9,14 @@ export const FOOTER_CONFIG = {
   ],
   contacts: [
     {
-      name: 'mail',
+      name: 'Mail',
       contact: 'mail@zaglushka.ru',
       link: 'mailto: mail@zaglushka.ru',
     },
     {
-      name: 'telegram',
-      contact: '@tg_zaglushka',
-      link: 'https://t.me/@tg_zaglushka',
+      name: 'Telegram',
+      contact: '@kovyshta',
+      link: 'https://t.me/@kovyshta',
     },
   ],
   buttons: [
