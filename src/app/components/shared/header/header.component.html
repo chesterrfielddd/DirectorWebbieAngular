@@ -1,5 +1,7 @@
 <h1 class="header-title">Иван Капустин</h1>
-<header class="header-container" #headerContainer>
+<header class="header-container" #headerContainer
+  [style.padding-top.px]="(isTopModified$$ | async) ? 40 : 20"
+>
   <nav>
     <a href="#portfolio">Portfolio</a>
     <a href="#about">About</a>
