@@ -120,10 +120,7 @@ footer {
       }
     }
 
-    &.nav-container {
-      display: grid;
-      grid-template-columns: 1fr 3fr;
-
+    &.col-portrait {
       @media (max-width: 1024px) {
         display: flex;
         justify-content: center;
@@ -134,19 +131,9 @@ footer {
         left: 0;
         align-self: center;
       }
-
-      .nav {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        align-items: end;
-
-        @media (max-width: 1024px) {
-          display: none;
-        }
-      }
-
-      .portrait {
+    }
+      
+    .portrait {
         border: 1px solid #000;
         border-radius: 5px;
         aspect-ratio: 1/1;
@@ -177,7 +164,6 @@ footer {
         }
       }
     }
-  }
 
   .col.col-desc-cont {
     display: grid;

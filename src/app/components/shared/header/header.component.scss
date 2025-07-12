@@ -1,48 +1,52 @@
-.header-container {
-  position: fixed;
-  top: 0;
-  right: 20px;
-  height: 75px;
-  z-index: 100;
-  padding: 5px 20px;
+app-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // background-color: rgba(11, 11, 11, 0.5);
-  // backdrop-filter: blur(10px);
-  transition: 0.2s;
+  padding: 10px 10px;
+  width: 100%;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
 
-  @media (max-width: 1024px) {
-    height: fit-content;
-    padding-top: 20px;
+  @media (max-width: 600px) {
+    padding: 10px;
+  }
+
+.nav-container {
+  position: fixed;
+  top: 38px;
+  right: 10px;
+
+  @media (max-width: 700px) {
+    top: 30px;
   }
 
   @media (max-width: 600px) {
     right: 10px;
-    padding: 0;
-    padding-top: 20px;
   }
 
-  button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
+  @media (max-width: 500px) {
+    top: 25px;
+  }
 
-    img {
-      width: 24px;
-      height: 24px;
+  .burger {
+    display: none;
+
+    @media (max-width: 1024px) {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      justify-content: center;
+      align-items: center;
     }
-    &::after {
-      content: "";
-      display: block;
-      width: 0;
-      height: 2px;
+
+    .burger-line {
+      width: 30px;
+      height: 1px;
       background-color: #fff;
-      transition: width 0.2s ease;
-    }
-
-    &:hover::after {
-      width: 100%;
+      transition: 0.2s ease; 
     }
   }
 
@@ -50,35 +54,49 @@
     display: flex;
     gap: 20px;
 
+    @media (max-width: 1024px) {
+      position: fixed;
+      top: 70px;
+      transition: 0.2s ease;
+      flex-direction: column;
+      align-items: end;
+      gap: 10px;
+    }
+
+    @media (max-width: 700px) {
+      top: 60px;
+    }
+
+    @media (max-width: 500px) {
+      top: 50px;
+    }
+
     a {
       text-decoration: none;
       color: #fff;
 
-      &::after {
-        content: "";
-        display: block;
-        width: 0;
-        height: 2px;
-        background-color: #fff;
-        transition: width 0.2s ease;
-      }
+        &::after {
+          content: "";
+          display: block;
+          width: 0;
+          height: 2px;
+          background-color: #fff;
+          transition: width 0.2s ease;
+        }
 
-      &:hover::after {
-        width: 100%;
+        &:hover::after {
+          width: 100%;
+        }
       }
-    }
-
-    @media (max-width: 1024px) {
-      flex-direction: column;
-      align-items: end;
     }
   }
 }
 
 .header-title {
   text-transform: uppercase;
-  position: absolute;
-  top: 5px;
-  left: 20px;
-  z-index: 100;
+
+  @media (max-width: 320px) {
+    text-wrap: wrap;
+    width: 250px;
+  }
 }

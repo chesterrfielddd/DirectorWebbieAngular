@@ -26,6 +26,11 @@
     text-decoration: none;
     color: #fff;
 
+    @media (max-width: 600px) {
+      left: 10px;
+      bottom: 20px;
+    }
+
     h4 {
       font-size: 24px;
       width: fit-content;

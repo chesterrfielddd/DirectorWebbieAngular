@@ -1,10 +1,12 @@
 <h1 class="header-title">Иван Капустин</h1>
-<header class="header-container" #headerContainer
-  [style.padding-top.px]="(isTopModified$$ | async) ? 40 : 20"
->
-  <nav>
+  <div class="nav-container">
+    <div class="burger" [style.gap.px]="isMenuOpen ? 0 : 5" (click)="toggleMenu()">
+      <div class="burger-line" [style.transform]="isMenuOpen ? 'rotate(-30deg)' : 'rotate(0deg)'"></div>
+      <div class="burger-line" [style.transform]="isMenuOpen ? 'rotate(30deg)' : 'rotate(0deg)'"></div>
+    </div>
+  <nav [style.right.px]="isMenuOpen ? 10 : -100">
     <a href="#portfolio">Portfolio</a>
     <a href="#about">About</a>
     <a href="#contacts">Contacts</a>
   </nav>
-</header>
+</div>
