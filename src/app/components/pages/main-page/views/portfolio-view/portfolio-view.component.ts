@@ -5,6 +5,7 @@ import { PORTFOLIO_LIST } from './portfolio-view.config';
 import { PopupService } from '../../../../../services/popup.service';
 import { PortfolioFilterType } from '../../../../../models';
 import { IPortfolioItem } from '../../../../../models';
+import { PortfolioApiService } from '../../../../../services/portfolio-api.service';
 
 @Component({
   selector: 'app-portfolio-view',
@@ -13,14 +14,28 @@ import { IPortfolioItem } from '../../../../../models';
   styleUrl: './portfolio-view.component.scss',
 })
 export class PortfolioViewComponent implements OnInit {
-  portfolioList = PORTFOLIO_LIST;
+  portfolioList: IPortfolioItem[] = [];
 
   filter$$ = new BehaviorSubject<PortfolioFilterType>('all');
 
-  constructor(private _popup: PopupService) {}
+  constructor(
+    private readonly _popup: PopupService,
+    private readonly _portfolioApi: PortfolioApiService
+  ) {}
 
   ngOnInit(): void {
     this.initSubscriptions();
+    this._portfolioApi.getPortfolioItems().subscribe(data => {data.map(item => {
+      this.portfolioList.push({
+        name: item.title.rendered,
+        description: item.acf.description,
+        category: item.acf.category,
+        coverUrl: item.acf.coverUrl,
+        videoUrl: item.acf.videoLink
+      })
+    })
+    console.log(this.portfolioList)
+  })
   }
 
   private initSubscriptions(): void {}
