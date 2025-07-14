@@ -6,7 +6,7 @@ import { IPortfolioApiItem } from '../models/portfolio-api-item.interface';
   providedIn: 'root'
 })
 export class PortfolioApiService {
-  apiUrl = 'http://admin.testwebbie.online/wp-json/wp/v2/posts';
+  apiUrl = 'https://admin.ivankapustin.com/wp-json/wp/v2/posts';
 
   constructor(
     private readonly _http: HttpClient

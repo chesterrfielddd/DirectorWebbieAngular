@@ -1,10 +1,10 @@
 export const FOOTER_CONFIG = {
   textArticles: [
     {
-      text: 'Буду рад посотрудничать. Пишите в телеграм или на почту, а вот рядом мое личико',
+      text: 'Буду рад познакомиться и посотрудничать! Пишите в телеграм или на почту.',
     },
     {
-      text: 'А еще у меня есть продакшн. Вот ссылочка, переходите, снимем все, что хотите',
+      text: 'А еще у меня есть продакшн. Вот ссылочка, переходите, снимем все, что хотите.',
     },
   ],
   contacts: [
@@ -22,7 +22,7 @@ export const FOOTER_CONFIG = {
   buttons: [
     {
       text: 'В продакшн',
-      link: 'http://www.crunchproduction.com/',
+      link: 'https://docs.google.com/presentation/d/19Dzl5xI6KS_KlD3aQy5GGjfA9E1nh9wQeT9Sow7bprE/edit?usp=sharing',
       isPrimary: false,
     },
     {
