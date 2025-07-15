@@ -27,7 +27,7 @@ export const FOOTER_CONFIG = {
     },
     {
       text: 'В Телеграм',
-      link: 'https://t.me/@tg_zaglushka',
+      link: 'https://t.me/kovyshta',
       isPrimary: true,
     },
   ],
