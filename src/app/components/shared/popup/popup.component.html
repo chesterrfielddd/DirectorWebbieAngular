@@ -10,7 +10,7 @@
             allowfullscreen
           ></iframe>
         }
-        @if (data.photoes) {
+        @if (data.photoes && !data.videoUrl) {
           <app-slider>
             @for (imageSrc of data.photoes; track imageSrc; let i = $index) {
               <app-slider-slide>
