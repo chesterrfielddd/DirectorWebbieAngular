@@ -6,7 +6,7 @@ export interface IPortfolioApiItem {
     },
     acf: {
         description: string,
-        category: "commertials" | "cinema" | "NDA"
+        category: "commercials" | "cinema" | "NDA"
         videoLink?: string | null,
         imagesArray?: { imageUrl: string }[] | null,
         coverUrl: string

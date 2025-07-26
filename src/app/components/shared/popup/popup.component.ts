@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnDestroy } from '@angular/core';
+import { Component, ElementRef, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { PopupService } from '../../../services/popup.service';
 import { CommonModule } from '@angular/common';
@@ -39,6 +39,12 @@ export class PopupComponent implements OnDestroy {
       }
     );
   }
+
+  //ngOnInit(): void {
+    //window.addEventListener('popstate', () => {
+      //this._popupService.closePopup()
+    //})
+  //}
 
   close(event: MouseEvent) {
     const popupContent = this._elRef.nativeElement.querySelector('.modal-container');

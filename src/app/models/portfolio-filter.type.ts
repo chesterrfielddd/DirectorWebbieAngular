@@ -1,1 +1,1 @@
-export type PortfolioFilterType = 'all' | 'commertials' | 'cinema' | 'NDA';
+export type PortfolioFilterType = 'all' | 'commercials' | 'cinema' | 'NDA';

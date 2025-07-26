@@ -3,7 +3,7 @@ import { IPortfolioItem } from '../../../../../models/portfolio-item.interface';
 export const PORTFOLIO_LIST: IPortfolioItem[] = [
   {
     name: 'Отэко',
-    category: 'commertials',
+    category: 'commercials',
     description:
       'Новогодний анимационный ролик для компании ОТЭКО. Агенство - enterprise 360',
     coverUrl:
@@ -12,21 +12,21 @@ export const PORTFOLIO_LIST: IPortfolioItem[] = [
   },
   {
     name: 'ВШЭ + ОРЗ Промо',
-    category: 'commertials',
+    category: 'commercials',
     coverUrl:
       'media/images/vshe-promo.jpg',
     videoUrl: 'https://player.vimeo.com/video/1075063725?h=649f2284a9',
   },
   {
     name: 'ВШЭ + ОРЗ Визитка',
-    category: 'commertials',
+    category: 'commercials',
     coverUrl:
       'media/images/vshe-vizitka.jpeg',
     videoUrl: 'https://player.vimeo.com/video/1075058540?h=4b031da711',
   },
   {
     name: 'Мудтрейлер фильма “Леди Макбет Мценского уезда”',
-    category: 'commertials',
+    category: 'commercials',
     description: `
       Мудтрейлер будущего фильма.
       </br></br>
@@ -39,7 +39,7 @@ export const PORTFOLIO_LIST: IPortfolioItem[] = [
   },
   {
     name: 'НИШТЯК БРАТОК',
-    category: 'commertials',
+    category: 'commercials',
     description: 'Имиджевый ролик для бренда скейтеров и работяг',
     coverUrl:
       'media/images/nb.jpg',
@@ -99,7 +99,7 @@ export const PORTFOLIO_LIST: IPortfolioItem[] = [
   },
   {
     name: 'МОНЕТА',
-    category: 'commertials',
+    category: 'commercials',
     description: `
       Поздравительный ролик для клиентов компании МОНЕТА”
     `,
